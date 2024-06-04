@@ -12,7 +12,7 @@ const SunriseSunsetCard: React.FC<SunriseSunsetCardProps> = ({ location }) => {
   useEffect(() => {
     const fetchSunriseSunset = async () => {
       try {
-        const response = await fetch(`http://api.weatherapi.com/v1/astronomy.json?key=${process.env.NEXT_PUBLIC_WEATHER_API_KEY}&q=${location}`);
+        const response = await fetch(`https://api.weatherapi.com/v1/astronomy.json?key=${process.env.NEXT_PUBLIC_WEATHER_API_KEY}&q=${location}`);
         if (!response.ok) {
           throw new Error('Failed to fetch sunrise and sunset data');
         }

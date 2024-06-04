@@ -25,7 +25,7 @@ const Header: React.FC = () => {
         const fetchData = async () => {
             try {
                 const response = await fetch(
-                    `http://api.weatherapi.com/v1/current.json?key=${process.env.NEXT_PUBLIC_WEATHER_API_KEY}&q=Dubai`
+                    `https://api.weatherapi.com/v1/current.json?key=${process.env.NEXT_PUBLIC_WEATHER_API_KEY}&q=Dubai`
                 );
                 if (!response.ok) {
                     throw new Error('Failed to fetch weather data');

@@ -10,7 +10,7 @@ const WeeklyForecastRow: React.FC<WeeklyForecastRowProps> = ({ location }) => {
   useEffect(() => {
     const fetchWeeklyForecast = async () => {
       try {
-        const response = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=${process.env.NEXT_PUBLIC_WEATHER_API_KEY}&q=${location}&days=7&aqi=no&alerts=no`);
+        const response = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=${process.env.NEXT_PUBLIC_WEATHER_API_KEY}&q=${location}&days=7&aqi=no&alerts=no`);
         if (!response.ok) {
           throw new Error('Failed to fetch weekly forecast data');
         }

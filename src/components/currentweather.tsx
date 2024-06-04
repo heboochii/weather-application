@@ -13,7 +13,7 @@ const CurrentWeather = () => {
     const fetchWeatherData = async () => {
       try {
         const response = await fetch(
-          `http://api.weatherapi.com/v1/current.json?key=${process.env.NEXT_PUBLIC_WEATHER_API_KEY}&q=Dubai&aqi=no`
+          `https://api.weatherapi.com/v1/current.json?key=${process.env.NEXT_PUBLIC_WEATHER_API_KEY}&q=Dubai&aqi=no`
         );
         if (!response.ok) {
           throw new Error('Failed to fetch weather data');
@@ -33,7 +33,7 @@ const CurrentWeather = () => {
   const handleCardClick = async () => {
     try {
       const response = await fetch(
-        'http://api.weatherapi.com/v1/marine.json?key=4b9f7bf84468464fa5d213444240206&q=Dubai&days=1'
+        'https://api.weatherapi.com/v1/marine.json?key=4b9f7bf84468464fa5d213444240206&q=Dubai&days=1'
       );
       if (!response.ok) {
         throw new Error('Failed to fetch hourly weather data');
